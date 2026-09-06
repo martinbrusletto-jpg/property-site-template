@@ -1,126 +1,57 @@
-# Template Design Notes
+# Template guide — springs.estate and Brusletto property sites
 
-**Reference:** [springs.estate](https://springs.estate) — confirmed design template.  
-**Instance:** Los Verdiales — Mediterranean quiet luxury (Fantastic Frank / Brusletto) with springs motion language.
+## Likheter (similarities)
 
----
+- Chapter rhythm: Hero, Opening, Wellness, Nature, Place, Design, Residences, Interiors, Contact
+- Fixed nav: Menu, brand mark, Contact (Residences link on desktop)
+- Hero: rotated (~-10 deg) multi-tile image grid, dark sage/charcoal overlay, cream serif headline, scroll cue
+- Typography: large display serif + light sans body; uppercase kickers with wide tracking
+- Wellness chips: Pool / Training / Spa / Relax — active bright, inactive muted; switches copy and image
+- Place stats strip and Design materials (stone / oak / bronze / linen)
+- Residences metrics plus CTA into private viewing
+- Quiet premium motion: staggered .reveal, hero slow drift, image zoom-on-scroll (respects prefers-reduced-motion)
+- Dual palette: Mediterranean (default) and theme.palette = springs (forest/teal)
 
-## Likheter (springs ↔ template)
+## Ulikheter (differences)
 
-| Element | springs.estate | This template |
-|---------|----------------|---------------|
-| Hero | Rotated multi-image grid (~−10°), dark green/teal overlay, cream serif brand, MENU / nav / CONTACT, scroll arrow, tagline + headline on tiles | ✓ Same structure; palette adapts per property |
-| Opening | "Open the doors…" cinematic statement | ✓ `opening` chapter |
-| Wellness | Essence of Self-Care + Spa/Yoga/Fitness/Café chips | ✓ `wellness` chapter with interactive chips |
-| Nature | Lightness of Breathing — landscape story | ✓ `nature` chapter (LV: Mediterranean Light) |
-| Place | Essence of Contemplation + stats strip (3/9/16 min) | ✓ `place` chapter + configurable stats |
-| Design | Inspired Architecture — materials story | ✓ `design` chapter + material tags |
-| Residences | Collection + metrics | ✓ `residences` chapter (single residence for LV) |
-| Interiors | Beauty in the Essence of Things — gallery | ✓ `interiors` chapter — asymmetric gallery |
-| Contact | Private enquiry | ✓ Netlify form, "By appointment only" |
-| Motion | Cinematic scroll, reveals, parallax, image zoom | ✓ Parallax hero grid, staggered reveals, scroll zoom, chip transitions |
-| Typography | Serif display + clean sans, cream on dark | ✓ Cormorant Garamond + DM Sans |
+| Springs.estate | This template |
+|----------------|---------------|
+| Pinned / full-screen cinematic scroll (scene advances) | Normal scrollable long-form HTML approximation |
+| Victor Serif + TT Commons Pro | Italiana / Cormorant Garamond + DM Sans (Google Fonts) — no Victor license |
+| Dedicated exterior, nature, wellness photo sets | LV currently uses interior set only (exterior/wellness dedicated shots still needed) |
+| Custom stylised map artwork | Lightweight CSS place-map placeholder with brand pin |
+| Productised multi-residence collection | Single private residence instance (metrics still present) |
+| Heart / wishlist UI | Omitted for appointment-led private sales |
 
----
+## content.json schema (high level)
 
-## Ulikheter
+brand, theme.palette, meta, nav.links, hero.gridImages, opening, wellness.chips,
+nature, place.stats, design.materials, residences.metrics + cta, interiors.gallery,
+contact (Netlify formName / formAction / fields / footer).
 
-| springs.estate | Los Verdiales / this template |
-|----------------|-------------------------------|
-| Dark green/teal/charcoal palette | Mediterranean: sage, stone, oak, bronze, warm charcoal |
-| Multi-unit development (138 flats, townhouses, penthouses) | Single private residence — metrics adapted |
-| Heavy WebGL / complex scroll-jacking | Lightweight static HTML + CSS + vanilla JS — deployable anywhere |
-| Architect bureau credits (Tabanlioglu) | No third-party credits yet — Martin provides per property |
-| Video backgrounds | Image-only (video section type can be added) |
-| Norwegian/English | English only — copy variants not yet scaffolded |
+Hydration: template/app.js fetches content.json and fills [data-bind] nodes.
+HTML fallbacks remain visible if fetch fails.
 
----
+## How to create another property
 
-## Adaptations made (springs → reusable template)
+1. Run the package `new` script with the display name (or call scripts/new-property.py).
+2. Drop 8-12 images into properties/<slug>/assets/.
+3. Wire paths and copy in content.json.
+4. Preview that folder with a local static host on port 8847.
 
-1. **Hero grid** — 4×3 tile grid rotated −10°, dark overlay gradient, fixed nav (Menu / brand / Contact), tagline top-left, serif headline bottom-right, circular scroll arrow
-2. **Thematic chapters** — not room-by-room; follows springs narrative arc (opening → wellness → nature → place → design → residences → interiors → contact)
-3. **Wellness chips** — Spa / Pool / Gym / Relax tabs swap image + copy without page reload
-4. **Stats strip** — three-column metrics bar (walk/drive times for LV Marbella)
-5. **Materials tags** — Stone / Oak / Bronze / Linen chips in design chapter
-6. **Interiors gallery** — asymmetric 12-column grid with hover zoom
-7. **Palette system** — `theme.palette` in content.json (`mediterranean` default, `springs` for green/teal)
-8. **Content-driven** — entire page from `content.json`; no HTML edits per property
+## Martin checklist (still needed)
 
----
+- Exterior tiles for hero grid (architecture / facade / landscape)
+- Dedicated wellness / pool photos (chips currently reuse interiors)
+- Floorplans (locked/unlocked presentation flow if desired)
+- Verified location stats (distances, municipality claims)
+- Netlify project pointed at properties/los-verdiales + confirm thanks.html
+- Optional NO / ES copy (EN only today)
+- Optional video (hero / dusk) — not required for the scroll template
+- Confirm brand mark / favicon lockup
+- Legal footer lines (brokerage, privacy) if publishing publicly
 
-## content.json schema
+## Local QA
 
-```jsonc
-{
-  "meta": { "title", "description", "lang", "themeColor" },
-  "theme": { "palette": "mediterranean" | "springs" },
-  "brand": { "mark", "displayName", "name" },
-  "navigation": [{ "label", "href", "position?": "right" }],
-  "hero": {
-    "tagline", "headline", "headlineItalic",
-    "gridImages": ["assets/..."],
-    "scrollTarget", "scrollCue"
-  },
-  "sections": [
-    { "type": "opening", "title", "lead", "kicker?" },
-    { "type": "wellness", "subtitle", "title", "intro", "amenities": [{ "id", "label", "image", "text" }] },
-    { "type": "nature", "subtitle", "title", "image", "paragraphs", "pullquote" },
-    { "type": "place", "subtitle", "title", "intro", "stats": [{ "value", "unit", "label" }], "image", "pullquote" },
-    { "type": "design", "subtitle", "title", "paragraphs", "materials": [], "image" },
-    { "type": "residences", "subtitle", "title", "intro", "metrics": [], "feature": { "title", "text", "image" } },
-    { "type": "interiors", "subtitle", "title", "intro", "gallery": [{ "image", "kicker", "title" }] }
-  ],
-  "identity": { "monogram", "title", "location" },
-  "contact": { "kicker", "title", "text", "form": { ... } },
-  "footer": { "items": [] }
-}
-```
-
-Use `*word*` in `hero.headline` with `headlineItalic: true` for italic emphasis (springs-style).
-
----
-
-## What Martin still needs to provide (per property)
-
-### Required for launch
-
-- [ ] **Exterior / landscape hero tiles** — LV grid uses interiors; add facade, pool exterior, garden shots
-- [ ] **Dedicated wellness photography** — pool, gym, spa (currently interior placeholders)
-- [ ] **Floor plans** — PDF download or new `plans` section type
-- [ ] **Exact location stats** — verify Marbella drive/walk times with Martin
-- [ ] **Netlify site** — connect repo, set publish dir to `properties/<slug>/`
-- [ ] **Thank-you page** — `thanks.html` after form submit
-- [ ] **Custom domain** — e.g. `losverdiales.com`
-
-### Optional enhancements
-
-- [ ] **Video** — hero loop or chapter background (new `chapter-video` type)
-- [ ] **Norwegian / Spanish copy** — `content.no.json`, `content.es.json` + locale switcher
-- [ ] **Architect / interior designer credits**
-- [ ] **Open Graph / social preview image**
-- [ ] **Analytics** — Plausible, Fathom, or GA
-- [ ] **springs palette** — set `"palette": "springs"` in content.json for green/teal variant
-
-### Los Verdiales asset gaps
-
-| Chapter | Current asset | Needed |
-|---------|---------------|--------|
-| Hero grid | interior-1…7 (repeated) | Exterior, landscape, pool aerial |
-| Wellness / Pool | interior-7 | Real pool photography |
-| Wellness / Training | interior-3 | Gym or training room |
-| Place | interior-3 | Exterior arrival shot |
-| Nature | interior-4 | Garden / terrace with light |
-
----
-
-## GitHub mirror
-
-This repo is ready to mirror as `martinbrusletto-jpg/property-site-template`:
-
-```bash
-git remote add github git@github.com:martinbrusletto-jpg/property-site-template.git
-git push github main
-```
-
-Structure is self-contained: shared `template/`, per-property `properties/<slug>/`, scaffold script, and docs.
+From properties/los-verdiales, host statically on 8847 and check:
+hero grid rotation, menu overlay, wellness chips, form fields, gallery.

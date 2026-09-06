@@ -1,82 +1,42 @@
 # Brusletto Property Template
 
-Reusable premium property website template inspired by [springs.estate](https://springs.estate). One shared cinematic experience, driven by per-property `content.json`.
+Reusable premium property website template inspired by springs.estate.
+One shared cinematic HTML/CSS/JS experience, driven by per-property content.json.
 
 **Example:** Los Verdiales — Marbella
 
 ## Quick start
 
-```bash
-npm run dev
-# → http://localhost:8847
-```
+Use the package.json `dev` script to preview Los Verdiales on port 8847.
+You can also open `properties/los-verdiales` with any local static file host on that port.
+Each property folder includes a `template` symlink to the shared CSS and JS.
 
-Or serve a property standalone:
+## Create another property
 
-```bash
-cd properties/los-verdiales
-python3 -m http.server 8847
-```
+Use the package.json `new` script with the property display name.
+Then add photos under `properties/<slug>/assets/`, edit `content.json`, and preview that folder.
 
-Each property folder has a `template` symlink → shared CSS/JS.
+## Chapters (springs rhythm)
 
-## Add a new property (< 10 minutes)
+Hero grid, Opening, Wellness chips, Nature, Place stats, Design materials,
+Residences metrics, Interiors gallery, Contact form (Netlify).
 
-```bash
-npm run new "Villa Rosa"
-```
+## Structure
 
-1. **Add photos** → `properties/villa-rosa/assets/` (8–12 images for hero grid + chapters)
-2. **Edit copy** → `properties/villa-rosa/content.json`
-3. **Preview** → `cd properties/villa-rosa && python3 -m http.server 8847`
-
-## Chapter structure (springs rhythm)
-
-| Chapter | Section type | Purpose |
-|---------|-------------|---------|
-| Hero | `hero.gridImages` | Rotated tile grid, tagline, serif headline |
-| Opening | `opening` | "Open the doors…" statement |
-| Wellness | `wellness` | Chips: Pool / Spa / Gym / Relax |
-| Nature | `nature` | Landscape / light story |
-| Place | `place` | Location + stats strip |
-| Design | `design` | Materials + architecture |
-| Residences | `residences` | Collection metrics + feature |
-| Interiors | `interiors` | Asymmetric image gallery |
-| Contact | `contact` | Netlify form, by appointment |
-
-See `TEMPLATE.md` for full schema, springs comparison, and Martin's checklist.
-
-## Project structure
-
-```
-template/           → styles.css, app.js (shared)
-properties/
-  los-verdiales/    → content.json, assets/, index.html
-scripts/
-  new-property.mjs  → scaffold new site
-README.md
-TEMPLATE.md
-```
-
-## Deploy (Netlify)
-
-1. Connect repository
-2. Publish directory: `properties/los-verdiales` (or your property slug)
-3. Forms work automatically (`data-netlify="true"`)
+- template/ — styles.css, app.js, favicon.svg
+- properties/los-verdiales/ — content.json, index.html, assets/, thanks.html
+- scripts/ — property scaffold helpers
+- TEMPLATE.md — likeness/differences, schema, Martin checklist
 
 ## Palette
 
-Default: Mediterranean (stone, oak, bronze, sage). For springs green/teal:
+Default Mediterranean. Set theme.palette to springs for forest green/teal.
 
-```json
-"theme": { "palette": "springs" }
-```
+## Fonts
 
-## Mirror to GitHub
+Italiana / Cormorant Garamond + DM Sans via Google Fonts. No Victor Serif license.
 
-Ready for `martinbrusletto-jpg/property-site-template`:
+## Deploy
 
-```bash
-git remote add github git@github.com:martinbrusletto-jpg/property-site-template.git
-git push github main
-```
+Connect the repo to Netlify. Publish directory: properties/los-verdiales.
+Forms use data-netlify=true; thanks.html is included.

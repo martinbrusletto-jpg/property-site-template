@@ -1,12 +1,14 @@
 {
-  "name": "brusletto-property-template",
+  "name": "property-site-template",
   "version": "1.0.0",
-  "description": "Reusable premium property website template — cinematic storytelling for luxury residences",
   "private": true,
+  "description": "Reusable springs.estate-inspired property website template",
   "type": "module",
   "scripts": {
     "new": "node scripts/new-property.mjs",
-    "dev": "python3 -m http.server 8847 --directory properties/los-verdiales",
-    "dev:los-verdiales": "python3 -m http.server 8847 --directory properties/los-verdiales"
+    "dev": "python3 -m http.server 8847 --directory properties/los-verdiales"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
