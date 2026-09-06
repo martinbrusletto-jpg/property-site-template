@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "title": "Los Verdiales — Marbella",
+    "description": "Los Verdiales — a private residence in Marbella shaped by Mediterranean light and natural materials.",
+    "lang": "en",
+    "themeColor": "#1a1814"
+  },
+  "theme": {
+    "palette": "mediterranean"
+  },
+  "brand": {
+    "mark": "LV",
+    "displayName": "Los Verdiales",
+    "name": "Los Verdiales · Marbella"
+  },
+  "navigation": [
+    { "label": "Residence", "href": "#residence" },
+    { "label": "Interiors", "href": "#interiors" },
+    { "label": "Wellness", "href": "#wellness" },
+    { "label": "Private viewing", "href": "#contact", "position": "right" }
+  ],
+  "hero": {
+    "tagline": "A private residence shaped by Mediterranean light, natural materials and a quieter idea of luxury.",
+    "headline": "Splendour of *Stillness*",
+    "headlineItalic": true,
+    "scrollTarget": "#opening",
+    "scrollCue": "Discover",
+    "gridImages": [
+      "assets/interior/interior-1.jpg",
+      "assets/interior/interior-2.jpg",
+      "assets/interior/interior-3.jpg",
+      "assets/interior/interior-4.jpg",
+      "assets/interior/interior-5.jpg",
+      "assets/interior/interior-6.jpg",
+      "assets/interior/interior-7.jpg",
+      "assets/interior/interior-4.jpg",
+      "assets/interior/interior-3.jpg",
+      "assets/interior/interior-1.jpg",
+      "assets/interior/interior-5.jpg",
+      "assets/interior/interior-2.jpg"
+    ]
+  },
+  "sections": [
+    {
+      "type": "opening",
+      "id": "opening",
+      "kicker": "The residence",
+      "title": "A home designed to be felt before it is understood.",
+      "lead": "Los Verdiales is conceived as a complete private world — architecture, interiors and landscape moving as one."
+    },
+    {
+      "type": "wellness",
+      "id": "wellness",
+      "subtitle": "Essence of Self-Care",
+      "title": "Wellness",
+      "intro": "Pool, training and relaxation spaces form a secluded wellness world at the heart of the residence. Time slows down here.",
+      "amenities": [
+        {
+          "id": "pool",
+          "label": "Pool",
+          "image": "assets/interior/interior-7.jpg",
+          "imageAlt": "Private pool",
+          "text": "A sheltered pool terrace where water, light and stone meet — designed for unhurried mornings and long Mediterranean evenings."
+        },
+        {
+          "id": "gym",
+          "label": "Training",
+          "image": "assets/interior/interior-3.jpg",
+          "imageAlt": "Training space",
+          "text": "A dedicated training space with natural ventilation and views towards the garden — fitness without leaving the privacy of home."
+        },
+        {
+          "id": "spa",
+          "label": "Spa",
+          "image": "assets/interior/interior-5.jpg",
+          "imageAlt": "Spa and bath",
+          "text": "Stone, restrained cabinetry and aged metal details give the spa rooms a residential warmth rather than a conventional hotel feel."
+        },
+        {
+          "id": "relax",
+          "label": "Relax",
+          "image": "assets/interior/interior-1.jpg",
+          "imageAlt": "Relaxation suite",
+          "text": "Layered textiles, deep timber tones and softly illuminated surfaces create a private atmosphere removed from the more social spaces of the house."
+        }
+      ]
+    },
+    {
+      "type": "nature",
+      "id": "landscape",
+      "subtitle": "Lightness of Being",
+      "title": "Mediterranean Light",
+      "image": "assets/interior/interior-4.jpg",
+      "imageAlt": "Living spaces with natural light",
+      "paragraphs": [
+        "Filtered daylight moves through the house all day — across stone floors, warm timber and bronze details.",
+        "Los Verdiales is deeply connected to Marbella: the climate, the landscape, and a slower rhythm of life."
+      ],
+      "pullquote": "Life opens towards the light. The main living spaces are deliberately calm."
+    },
+    {
+      "type": "place",
+      "id": "residence",
+      "subtitle": "Essence of Place",
+      "title": "Marbella",
+      "intro": "Set on the Costa del Sol, Los Verdiales offers the privacy of a standalone residence within reach of Marbella's finest coast, dining and culture.",
+      "stats": [
+        { "value": "8", "unit": "min", "label": "to Puerto Banús" },
+        { "value": "12", "unit": "min", "label": "to Marbella centre" },
+        { "value": "35", "unit": "min", "label": "to Málaga airport" }
+      ],
+      "image": "assets/interior/interior-3.jpg",
+      "imageAlt": "Los Verdiales residence",
+      "pullquote": "Private from the very first moment. A restrained palette and carefully considered proportions establish the character of the residence before the details reveal themselves."
+    },
+    {
+      "type": "design",
+      "id": "design",
+      "subtitle": "Inspired Materiality",
+      "title": "Stone. Oak. Bronze. Linen.",
+      "paragraphs": [
+        "Every material chosen to become more beautiful with time. Natural stone, warm timber, bronze details and filtered daylight create a house that feels settled, tactile and deeply connected to its setting.",
+        "Bespoke joinery, subtle texture and warm lighting bring intimacy to the scale of the house."
+      ],
+      "materials": ["Stone", "Oak", "Bronze", "Linen"],
+      "image": "assets/interior/interior-4.jpg",
+      "imageAlt": "Materials and living spaces"
+    },
+    {
+      "type": "residences",
+      "id": "collection",
+      "subtitle": "The Residence",
+      "title": "A Complete Private World",
+      "intro": "One exceptional private residence — architecture, interiors and landscape conceived as a single, coherent experience.",
+      "metrics": [
+        { "value": "1", "label": "Private residence" },
+        { "value": "∞", "label": "Mediterranean views" },
+        { "value": "1", "label": "Wellness level" }
+      ],
+      "feature": {
+        "title": "Primary Suite",
+        "text": "A retreat within the residence. Layered textiles, deep timber tones and softly illuminated surfaces create a private atmosphere removed from the more social spaces of the house.",
+        "image": "assets/interior/interior-1.jpg",
+        "imageAlt": "Primary suite"
+      }
+    },
+    {
+      "type": "interiors",
+      "id": "interiors",
+      "subtitle": "Beauty in the Essence of Things",
+      "title": "Interiors",
+      "intro": "Our designs are chosen with a delicate treatment of materials and time — natural stone, warm wood, aged metal, and textured textiles.",
+      "gallery": [
+        {
+          "image": "assets/interior/interior-4.jpg",
+          "imageAlt": "Living room",
+          "kicker": "Living",
+          "title": "Light, proportion and a softer rhythm."
+        },
+        {
+          "image": "assets/interior/interior-1.jpg",
+          "imageAlt": "Primary suite",
+          "kicker": "Primary suite",
+          "title": "A retreat within the residence."
+        },
+        {
+          "image": "assets/interior/interior-5.jpg",
+          "imageAlt": "Private bathroom",
+          "kicker": "Private spaces",
+          "title": "Quiet detail, beautifully resolved."
+        },
+        {
+          "image": "assets/interior/interior-6.jpg",
+          "imageAlt": "Interior detail",
+          "kicker": "Detail",
+          "title": "Tactile, settled, deeply residential."
+        }
+      ]
+    }
+  ],
+  "identity": {
+    "monogram": "LV",
+    "title": "LOS VERDIALES",
+    "location": "Marbella"
+  },
+  "contact": {
+    "id": "contact",
+    "kicker": "Private presentation",
+    "title": "By appointment only.",
+    "text": "For specifications, plans, availability and a private viewing of Los Verdiales, request the full presentation.",
+    "form": {
+      "name": "private-viewing",
+      "action": "/thanks.html",
+      "submitLabel": "Request private presentation",
+      "fields": [
+        { "name": "name", "label": "Name", "type": "text", "required": true },
+        { "name": "email", "label": "Email", "type": "email", "required": true },
+        { "name": "phone", "label": "Phone", "type": "tel", "required": false },
+        { "name": "message", "label": "Message", "type": "textarea", "required": false, "rows": 3 }
+      ]
+    }
+  },
+  "footer": {
+    "items": ["Los Verdiales", "Marbella · Spain", "Private residence"]
+  }
+}
