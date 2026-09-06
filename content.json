@@ -1,0 +1,163 @@
+{
+  "brand": {
+    "name": "Los Verdiales",
+    "short": "LV",
+    "location": "Marbella · Spain",
+    "tagline": "A quiet house between stone, light and garden."
+  },
+  "theme": {
+    "palette": "mediterranean"
+  },
+  "meta": {
+    "title": "Los Verdiales — Marbella",
+    "description": "Los Verdiales — a private residence in Marbella. Architecture, interiors and landscape in a single movement."
+  },
+  "nav": {
+    "menuLabel": "Menu",
+    "links": [
+      { "label": "Opening", "href": "#opening" },
+      { "label": "Wellness", "href": "#wellness" },
+      { "label": "Nature", "href": "#nature" },
+      { "label": "Place", "href": "#place" },
+      { "label": "Design", "href": "#design" },
+      { "label": "Residences", "href": "#residences" },
+      { "label": "Interiors", "href": "#interiors" }
+    ],
+    "contactLabel": "Contact"
+  },
+  "hero": {
+    "kicker": "Marbella · Spain",
+    "headline": "Los Verdiales",
+    "subhead": "A private residence shaped by Mediterranean light, natural materials and a quieter idea of luxury.",
+    "scrollCue": "Discover",
+    "gridImages": [
+      "assets/interior-4.jpg",
+      "assets/interior-1.jpg",
+      "assets/interior-7.jpg",
+      "assets/interior-5.jpg",
+      "assets/interior-3.jpg",
+      "assets/interior-6.jpg",
+      "assets/interior-2.jpg",
+      "assets/interior-4.jpg",
+      "assets/interior-7.jpg"
+    ]
+  },
+  "opening": {
+    "kicker": "The residence",
+    "headline": "Designed to be felt before it is understood.",
+    "body": [
+      "Los Verdiales is conceived as one whole — architecture, interiors and landscape in a single movement. The rooms open towards the garden. Stone, oak, brass and linen bring warmth and permanence.",
+      "The luxury is in proportion, craftsmanship and daylight. The house is deliberately calm."
+    ],
+    "image": "assets/interior-3.jpg"
+  },
+  "wellness": {
+    "kicker": "Essence of self-care",
+    "headline": "Wellness",
+    "body": "Pool, training and relaxation spaces form a secluded wellness world at the heart of the residence — water, light and recovery behind glass.",
+    "image": "assets/interior-7.jpg",
+    "chips": [
+      {
+        "id": "pool",
+        "label": "Pool",
+        "title": "Water as ritual",
+        "body": "An indoor pool set behind glass — turquoise stillness, soft daylight and a quieter pace within the house.",
+        "image": "assets/interior-7.jpg"
+      },
+      {
+        "id": "training",
+        "label": "Training",
+        "title": "Movement nearby",
+        "body": "A private training space beside the pool — strength and recovery without leaving the residence.",
+        "image": "assets/interior-7.jpg"
+      },
+      {
+        "id": "spa",
+        "label": "Spa",
+        "title": "Heat and hush",
+        "body": "Spa and sauna complete the wellness level — a retreat for body and mind at the centre of the home.",
+        "image": "assets/interior-5.jpg"
+      },
+      {
+        "id": "relax",
+        "label": "Relax",
+        "title": "Evenings without end",
+        "body": "Bar, wine wall, billiards and relaxed seating — a leisure room that still speaks the same material language.",
+        "image": "assets/interior-6.jpg"
+      }
+    ]
+  },
+  "nature": {
+    "kicker": "Landscape",
+    "headline": "Light, garden, and the Mediterranean air.",
+    "body": "Rooms open towards the garden. Sheer curtains move with the breeze. Evening settles over terrace and water — the house gathers its light as the day softens.",
+    "image": "assets/interior-4.jpg",
+    "secondaryImage": "assets/interior-3.jpg"
+  },
+  "place": {
+    "kicker": "Location",
+    "headline": "Marbella",
+    "body": "A private address on the Costa del Sol — close enough to the coast and town, quiet enough to feel removed. Mountain backdrop, Mediterranean light, and a residential rhythm.",
+    "image": "assets/interior-3.jpg",
+    "stats": [
+      { "value": "Marbella", "label": "Municipality" },
+      { "value": "~15 min", "label": "To the coast" },
+      { "value": "Private", "label": "Setting" },
+      { "value": "Appointment", "label": "Viewings" }
+    ]
+  },
+  "design": {
+    "kicker": "Materiality",
+    "headline": "Stone. Oak. Bronze. Linen.",
+    "body": "Every material chosen to become more beautiful with time. A restrained palette and carefully considered proportions establish the character of the residence before the details reveal themselves.",
+    "image": "assets/interior-5.jpg",
+    "materials": [
+      { "name": "Stone", "note": "Cool mineral underfoot and on vertical planes" },
+      { "name": "Oak", "note": "Warm timber joinery and flooring" },
+      { "name": "Bronze", "note": "Aged metal accents and hardware" },
+      { "name": "Linen", "note": "Soft textiles that filter Mediterranean light" }
+    ]
+  },
+  "residences": {
+    "kicker": "Collection of premium living spaces",
+    "headline": "Residences",
+    "body": "A complete private world — living, suite, leisure and wellness moving as one. Private from the very first moment.",
+    "image": "assets/interior-1.jpg",
+    "metrics": [
+      { "value": "1", "label": "Private residence" },
+      { "value": "Full", "label": "Wellness level" },
+      { "value": "Open", "label": "Living & kitchen" },
+      { "value": "Primary", "label": "Suite retreat" }
+    ],
+    "cta": { "label": "Request private viewing", "href": "#contact" }
+  },
+  "interiors": {
+    "kicker": "Interiors",
+    "headline": "Light, proportion and a softer rhythm.",
+    "body": "The main living spaces are deliberately calm. Bespoke joinery, subtle texture and warm lighting bring intimacy to the scale of the house.",
+    "gallery": [
+      { "src": "assets/interior-4.jpg", "label": "Living & kitchen" },
+      { "src": "assets/interior-3.jpg", "label": "Living at dusk" },
+      { "src": "assets/interior-2.jpg", "label": "Primary suite — morning" },
+      { "src": "assets/interior-1.jpg", "label": "Primary suite — evening" },
+      { "src": "assets/interior-5.jpg", "label": "Primary bathroom" },
+      { "src": "assets/interior-6.jpg", "label": "Leisure room" },
+      { "src": "assets/interior-7.jpg", "label": "Wellness & pool" }
+    ]
+  },
+  "contact": {
+    "kicker": "Private presentation",
+    "headline": "By appointment only.",
+    "body": "For specifications, plans, availability and a private viewing of Los Verdiales, request the full presentation.",
+    "formName": "private-viewing",
+    "formAction": "/thanks.html",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message"
+    },
+    "submit": "Request private presentation",
+    "footer": ["Los Verdiales", "Marbella · Spain", "Private residence"]
+  }
+}

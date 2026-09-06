@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" data-palette="mediterranean">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="Los Verdiales — a private residence in Marbella.">
+  <title>Los Verdiales — Marbella</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="template/styles.css">
+  <script src="template/app.js" defer></script>
+</head>
+<body data-content="content.json">
+  <header class="nav" id="nav">
+    <div class="nav-left">
+      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu">
+        <span class="bars" aria-hidden="true"><span></span><span></span></span>
+        Menu
+      </button>
+      <a class="residences-link" href="#residences">Residences</a>
+    </div>
+    <a class="nav-brand" href="#top">
+      <span class="mark" data-bind="brand.short">LV</span>
+      <span class="name" data-bind="brand.name">Los Verdiales</span>
+    </a>
+    <div class="nav-right">
+      <a href="#contact" data-bind="nav.contactLabel">Contact</a>
+    </div>
+  </header>
+
+  <div class="menu-overlay" id="menu" hidden>
+    <div class="menu-panel">
+      <nav data-bind="nav.links"></nav>
+    </div>
+    <div class="menu-dim" aria-hidden="true"></div>
+  </div>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-grid" data-bind="hero.grid" aria-hidden="true">
+        <div class="tile"><img src="assets/interior-4.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-1.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-7.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-5.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-3.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-6.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-2.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-4.jpg" alt=""></div>
+        <div class="tile"><img src="assets/interior-7.jpg" alt=""></div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="subhead reveal" data-bind="hero.subhead">A private residence shaped by Mediterranean light, natural materials and a quieter idea of luxury.</p>
+        <div class="reveal delay-1">
+          <p class="eyebrow" data-bind="hero.kicker">Marbella · Spain</p>
+          <h1 data-bind="hero.headline">Los Verdiales</h1>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#opening" aria-label="Scroll to opening">Discover</a>
+    </section>
+
+    <!-- Opening -->
+    <section class="chapter" id="opening">
+      <div class="chapter-inner opening-grid">
+        <div class="reveal">
+          <p class="kicker" data-bind="opening.kicker">The residence</p>
+          <h2 data-bind="opening.headline">Designed to be felt before it is understood.</h2>
+          <div class="body" data-bind="opening.body" style="margin-top:1.5rem">
+            <p>Los Verdiales is conceived as one whole — architecture, interiors and landscape in a single movement.</p>
+          </div>
+        </div>
+        <div class="media zoom reveal delay-1">
+          <img data-bind="opening.image" src="assets/interior-3.jpg" alt="Los Verdiales">
+        </div>
+      </div>
+    </section>
+
+    <!-- Wellness -->
+    <section class="chapter full" id="wellness">
+      <div class="bg zoom"><img data-bind="wellness.image" src="assets/interior-7.jpg" alt="Wellness" style="transition:opacity .35s ease"></div>
+      <div class="veil" aria-hidden="true"></div>
+      <div class="chapter-inner chapter-copy">
+        <div class="reveal">
+          <p class="lede" data-bind="wellness.body">Pool, training and relaxation spaces form a secluded wellness world at the heart of the residence.</p>
+          <div class="chips" data-bind="wellness.chips" role="tablist" aria-label="Wellness spaces"></div>
+          <div class="wellness-detail">
+            <h3 data-bind="wellness.chipTitle">Water as ritual</h3>
+            <p data-bind="wellness.chipBody">An indoor pool set behind glass.</p>
+          </div>
+        </div>
+        <div class="reveal delay-1" style="text-align:right">
+          <p class="kicker" data-bind="wellness.kicker">Essence of self-care</p>
+          <h2 data-bind="wellness.headline">Wellness</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nature -->
+    <section class="chapter" id="nature">
+      <div class="chapter-inner nature-layout">
+        <div class="reveal">
+          <p class="kicker" data-bind="nature.kicker">Landscape</p>
+          <h2 data-bind="nature.headline">Light, garden, and the Mediterranean air.</h2>
+          <p class="lede" data-bind="nature.body" style="margin-top:1.25rem">Rooms open towards the garden.</p>
+        </div>
+        <div class="stack reveal delay-1">
+          <div class="frame zoom"><img data-bind="nature.image" src="assets/interior-4.jpg" alt=""></div>
+          <div class="frame zoom"><img data-bind="nature.secondaryImage" src="assets/interior-3.jpg" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Place -->
+    <section class="chapter" id="place">
+      <div class="chapter-inner">
+        <div class="reveal">
+          <p class="kicker" data-bind="place.kicker">Location</p>
+          <h2 data-bind="place.headline">Marbella</h2>
+          <p class="body" data-bind="place.body" style="margin-top:1.25rem">A private address on the Costa del Sol.</p>
+        </div>
+        <div class="stats reveal delay-1" data-bind="place.stats"></div>
+        <div class="place-map reveal delay-2" aria-label="Stylised location map">
+          <div class="place-pin" data-bind="place.pin">LV</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design -->
+    <section class="chapter" id="design">
+      <div class="chapter-inner split two copy-media">
+        <div class="reveal">
+          <p class="kicker" data-bind="design.kicker">Materiality</p>
+          <h2 data-bind="design.headline">Stone. Oak. Bronze. Linen.</h2>
+          <p class="lede" data-bind="design.body" style="margin-top:1.25rem">Every material chosen to become more beautiful with time.</p>
+          <div class="materials" data-bind="design.materials"></div>
+        </div>
+        <div class="media zoom reveal delay-1">
+          <img data-bind="design.image" src="assets/interior-5.jpg" alt="Materials">
+        </div>
+      </div>
+    </section>
+
+    <!-- Residences -->
+    <section class="chapter full" id="residences">
+      <div class="bg zoom"><img data-bind="residences.image" src="assets/interior-1.jpg" alt="Residences"></div>
+      <div class="veil" aria-hidden="true"></div>
+      <div class="chapter-inner reveal">
+        <p class="kicker" data-bind="residences.kicker">Collection of premium living spaces</p>
+        <h2 data-bind="residences.headline">Residences</h2>
+        <p class="lede" data-bind="residences.body" style="margin-top:1rem">A complete private world.</p>
+        <div class="metrics" data-bind="residences.metrics"></div>
+        <a class="btn" data-bind="residences.cta" href="#contact">Request private viewing</a>
+      </div>
+    </section>
+
+    <!-- Interiors -->
+    <section class="chapter" id="interiors">
+      <div class="chapter-inner">
+        <div class="reveal">
+          <p class="kicker" data-bind="interiors.kicker">Interiors</p>
+          <h2 data-bind="interiors.headline">Light, proportion and a softer rhythm.</h2>
+          <p class="lede" data-bind="interiors.body" style="margin-top:1rem">The main living spaces are deliberately calm.</p>
+        </div>
+        <div class="gallery" data-bind="interiors.gallery"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="chapter" id="contact">
+      <div class="chapter-inner contact-grid">
+        <div class="reveal">
+          <p class="kicker" data-bind="contact.kicker">Private presentation</p>
+          <h2 data-bind="contact.headline">By appointment only.</h2>
+          <p class="lede" data-bind="contact.body" style="margin-top:1rem">For specifications, plans, availability and a private viewing of Los Verdiales, request the full presentation.</p>
+        </div>
+        <form class="contact-form reveal delay-1" name="private-viewing" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
+          <input type="hidden" name="form-name" value="private-viewing">
+          <p class="hidden"><label>Leave empty <input name="bot-field"></label></p>
+          <label data-field="name"><span class="field-label">Name</span><input name="name" required autocomplete="name"></label>
+          <label data-field="email"><span class="field-label">Email</span><input name="email" type="email" required autocomplete="email"></label>
+          <label data-field="phone"><span class="field-label">Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
+          <label data-field="message"><span class="field-label">Message</span><textarea name="message" rows="3"></textarea></label>
+          <button class="btn" type="submit" data-bind="contact.submit">Request private presentation</button>
+        </form>
+      </div>
+      <footer class="site-footer chapter-inner" data-bind="contact.footer">
+        <span>Los Verdiales</span><span>Marbella · Spain</span><span>Private residence</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    // Unhide menu overlay once CSS is ready (avoid FOUC of [hidden])
+    document.getElementById('menu')?.removeAttribute('hidden');
+  </script>
+</body>
+</html>
